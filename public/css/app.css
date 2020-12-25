@@ -17112,3 +17112,14 @@ body {
   outline: none;
 }
 
+.register-page img.captcha {
+  cursor: pointer;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  padding: 3px;
+}
+
