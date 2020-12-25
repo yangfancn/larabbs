@@ -61,3 +61,13 @@ body {
 .text-pink {
   color: $pink;
 }
+
+.logout {
+  border: none;
+  outline: none;
+  font-weight: 600;
+  background-color: transparent;
+  &:focus {
+    outline: none;
+  }
+}
