@@ -17071,15 +17071,8 @@ html {
   min-height: 100%;
 }
 
-body {
-  margin-bottom: 60px;
-}
-
 .footer {
-  position: absolute;
-  bottom: 0;
   width: 100%;
-  height: 60px;
   background-color: #000;
 }
 
@@ -17121,5 +17114,34 @@ body {
   -ms-border-radius: 4px;
   -o-border-radius: 4px;
   padding: 3px;
+}
+
+.topics_index-page .topic-list .nav > li > a {
+  position: relative;
+  display: block;
+  padding: 5px 14px;
+  font-size: 0.9em;
+}
+
+.topics_index-page .topic-list .media-object {
+  width: 52px;
+  height: 52px;
+}
+
+.topics_index-page .topic-list a {
+  color: #444444;
+}
+
+.topics_index-page .topic-list .meta {
+  font-size: 0.9em;
+  color: #b3b3b3;
+}
+
+.topics_index-page .topic-list .meta a {
+  color: #bb33bb;
+}
+
+.topics_index-page .topic-list .badge {
+  background-color: #d8d8d8;
 }
 

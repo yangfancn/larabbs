@@ -17,7 +17,7 @@ class UsersTableSeeder extends Seeder
         User::factory()->count(10)->create();
         $user = User::first();
         $user->name = 'YangFan';
-        $user->email = 'yf244190858@gmail.com';
+        $user->email = 'yf244190857@gmail.com';
         $user->password =  bcrypt('19950930');
         $user->avatar = "http://bbs.cc/uploads/images/avatars/202012/30/1_1609325971_58bErx12bj.jpg";
         $user->save();

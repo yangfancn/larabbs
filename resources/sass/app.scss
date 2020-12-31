@@ -32,15 +32,9 @@ html {
   min-height: 100%;
 }
 
-body {
-  margin-bottom: 60px;
-}
 
 .footer {
-  position: absolute;
-  bottom: 0;
   width: 100%;
-  height: 60px;
   background-color: #000;
 
   .container {
@@ -67,6 +61,7 @@ body {
   outline: none;
   font-weight: 600;
   background-color: transparent;
+
   &:focus {
     outline: none;
   }
@@ -82,5 +77,41 @@ body {
     -ms-border-radius: 4px;
     -o-border-radius: 4px;
     padding: 3px;
+  }
 }
+
+
+
+.topics_index-page {
+  .topic-list {
+    .nav>li>a {
+      position: relative;
+      display: block;
+      padding: 5px 14px;
+      font-size: 0.9em;
+    }
+
+    .media-object {
+      width: 52px;
+      height: 52px;
+    }
+
+    a {
+      color: #444444;
+    }
+
+    .meta {
+      font-size: 0.9em;
+      color: #b3b3b3;
+
+      a {
+        color: #bb33bb;
+      }
+    }
+
+    .badge {
+      background-color: #d8d8d8;
+    }
+
+  }
 }
