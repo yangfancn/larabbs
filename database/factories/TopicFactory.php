@@ -11,8 +11,14 @@ class TopicFactory extends Factory
 
     public function definition()
     {
+        $sentence = $this->faker->sentence();
+
         return [
-            // $this->faker->name,
+            'title' => $sentence,
+            'body' => $this->faker->text(),
+            'excerpt' => $sentence,
+            'user_id' => $this->faker->randomElement(range(1, 10)),
+            'category_id' => $this->faker->randomElement(range(1, 4)),
         ];
     }
 }
