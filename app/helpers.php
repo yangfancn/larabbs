@@ -31,6 +31,11 @@ function if_route_param($param, $value)
     return $param && (is_object($param) ? $param->id : $param) == $value;
 }
 
+function if_query($query, $value)
+{
+    return request()->$query && request()->$query == $value;
+}
+
 
 function category_nav_active($category_id) {
     return active_class(if_route('categories.show') && if_route_param('category', $category_id));
