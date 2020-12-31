@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <!-- CSRF TOKEN -->
   <meta name="csrf-token" content="{{ csrf_token() }}">
-  <title>@yield('title', 'LaraBBS')</title>
+  <title>@yield('title', 'LaraBBS')-{{ env('APP_NAME') }}</title>
   <!-- Styles -->
   <link rel="stylesheet" href="{{ mix('css/app.css') }}">
 </head>

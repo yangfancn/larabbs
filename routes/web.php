@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CategoriesController;
 use App\Http\Controllers\PagesController;
 use App\Http\Controllers\TopicsController;
 use App\Http\Controllers\UsersController;
@@ -24,3 +25,5 @@ Auth::routes(['verify' => true]);
 Route::resource('users', UsersController::class, ['only' => ['show', 'update', 'edit']]);
 
 Route::resource('topics', TopicsController::class, ['only' => ['index', 'show', 'create', 'store', 'update', 'edit', 'destroy']]);
+
+Route::resource('categories', CategoriesController::class, ['only' => ['show']]);

@@ -15,7 +15,9 @@
               </a>
             </div>
             <small class="media-body meta text-secondary">
-              <a href="#" class="text-secondary" title="{{ $topic->category->name }}"><i class="far fa-folder mr-1"></i>{{ $topic->category->name }}</a>
+              <a href="{{ route('categories.show', $topic->category->id) }}" class="text-secondary" title="{{ $topic->category->name }}">
+                <i class="far fa-folder mr-1"></i>{{ $topic->category->name }}
+              </a>
               <span class="mx-2"> • </span>
               <a href="{{ route('users.show', $topic->user_id) }}" class="text-secondary"><i class="far fa-user mr-1"></i>{{ $topic->user->name }}</a>
               <span class="mx-2"> • </span>
