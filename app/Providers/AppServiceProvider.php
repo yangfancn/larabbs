@@ -2,7 +2,10 @@
 
 namespace App\Providers;
 
+use App\Http\Controllers\TopicsController;
+use App\Models\Topic;
 use Illuminate\Support\ServiceProvider;
+use App\Observers\TopicObserver;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -24,5 +27,6 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         \Illuminate\Pagination\Paginator::useBootstrap();
+        Topic::observe(TopicObserver::class);
     }
 }
