@@ -14,7 +14,7 @@
       </h2>
     </div>
     <div class="card-body">
-      <form action="{{ $topic->id ? route('topics.edit', $topic->id) : route('topics.store') }}" method="POST"
+      <form action="{{ $topic->id ? route('topics.update', $topic->id) : route('topics.store') }}" method="POST"
         accept-charset="UTF-8">
         @if ($topic->id)
         @method('PUT')
@@ -28,15 +28,19 @@
 
         <div class="form-group">
           <select name="category_id" class="form-control" required>
-            <option value="" hidden disabled selected>请选择分类</option>
+            <option value="" hidden disabled {{ $topic->id ? '' : 'selected' }}>请选择分类</option>
             @foreach ($categories as $category)
-            <option value="{{ $category->id }}">{{ $category->name }}</option>
+            <option value="{{ $category->id }}" {{ $topic->category_id === $category->id ? 'selected' : ''  }}>
+              {{ $category->name }}
+            </option>
             @endforeach
           </select>
         </div>
 
         <div class="form-group">
-          <textarea name="body" rows="6" id="editor" class="form-control" placeholder="话题内容(请输入最少3个字符)..." required></textarea>
+          <textarea name="body" rows="6" id="editor" class="form-control" placeholder="话题内容(请输入最少3个字符)..." required>
+            {{ old('body', $topic->body) }}
+          </textarea>
         </div>
 
         <div class="well well-sm">
@@ -49,16 +53,16 @@
 @endsection
 
 @section('style')
-  <link rel="stylesheet" href="{{ asset('css/simditor.css') }}">
+<link rel="stylesheet" href="{{ asset('css/simditor.css') }}">
 @endsection
 
 @section('script')
-  <script src="{{ asset('js/module.js') }}"></script>
-  <script src="{{ asset('js/hotkeys.js') }}"></script>
-  <script src="{{ asset('js/uploader.js') }}"></script>
-  <script src="{{ asset('js/simditor.js') }}"></script>
-  <script>
-    $(document).ready(function() {
+<script src="{{ asset('js/module.js') }}"></script>
+<script src="{{ asset('js/hotkeys.js') }}"></script>
+<script src="{{ asset('js/uploader.js') }}"></script>
+<script src="{{ asset('js/simditor.js') }}"></script>
+<script>
+  $(document).ready(function() {
       var editor = new Simditor({
         textarea: $('#editor'),
         defaultImage: '/images/image.png',
@@ -74,5 +78,5 @@
         pasteImage: true,
       })
     })
-  </script>
+</script>
 @endsection

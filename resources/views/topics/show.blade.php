@@ -41,8 +41,10 @@
           </div>
 
           <div class="operate border-top pt-4">
-            <a href="{{ route('users.edit', $topic->id) }}" class="btn btn-outline-secondary btn-sm" role="button"><i class="fa fa-edit mr-2"></i>编辑</a>
-            <a href="#" class="btn btn-outline-secondary btn-sm" role="button"><i class="fa fa-trash mr-2"></i>删除</a>
+            @if ($topic->user_id == Auth::id())
+              <a href="{{ route('topics.edit', $topic->id) }}" class="btn btn-outline-secondary btn-sm" role="button"><i class="fa fa-edit mr-2"></i>编辑</a>
+              <a href="#" class="btn btn-outline-secondary btn-sm" role="button"><i class="fa fa-trash mr-2"></i>删除</a>
+            @endif
           </div>
         </div>
       </div>
