@@ -9,6 +9,7 @@
   <title>@yield('title', 'LaraBBS')-{{ env('APP_NAME') }}</title>
   <!-- Styles -->
   <link rel="stylesheet" href="{{ mix('css/app.css') }}">
+  @yield('style')
 </head>
 <body>
   <div id="app" class="{{ route_class() }}-page">
@@ -21,5 +22,6 @@
   </div>
   <!-- Scripts -->
   <script src="{{ mix('js/app.js') }}"></script>
+  @yield('script')
 </body>
 </html>
