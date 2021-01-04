@@ -7,6 +7,7 @@
   <!-- CSRF TOKEN -->
   <meta name="csrf-token" content="{{ csrf_token() }}">
   <title>@yield('title', 'LaraBBS')-{{ env('APP_NAME') }}</title>
+  <meta name="description" content="@yield('description', env('APP_NAME') . '社区！')">
   <!-- Styles -->
   <link rel="stylesheet" href="{{ mix('css/app.css') }}">
   @yield('style')
