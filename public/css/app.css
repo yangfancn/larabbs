@@ -17151,3 +17151,25 @@ html {
   background-color: #d8d8d8;
 }
 
+.topics_create-page h2 {
+  font-size: 22px;
+  margin-bottom: 0;
+}
+
+.toolbar-menu-image li a span {
+  font-size: 14px;
+}
+
+.simditor .simditor-body {
+  font-size: 14px !important;
+}
+
+.simditor .simditor-body img {
+  max-width: 100%;
+  height: auto;
+}
+
+.simditor .simditor-placeholder {
+  font-size: 14px !important;
+}
+

@@ -82,7 +82,8 @@ html {
 
 
 
-.topics_index-page, .categories_show-page {
+.topics_index-page,
+.categories_show-page {
   .topic-list {
     .nav>li>a {
       position: relative;
@@ -115,3 +116,32 @@ html {
 
   }
 }
+
+.topics_create-page {
+  h2 {
+    font-size: 22px;
+    margin-bottom: 0;
+  }
+}
+
+.toolbar-menu-image li a span {
+  font-size: 14px;
+}
+
+.simditor {
+  .simditor-body {
+    font-size: 14px !important;
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+  }
+
+  .simditor-placeholder {
+    font-size: 14px !important;
+  }
+}
+
+
