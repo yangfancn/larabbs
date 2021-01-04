@@ -41,10 +41,16 @@
           </div>
 
           <div class="operate border-top pt-4">
-            @if ($topic->user_id == Auth::id())
+            @can('update', $topic)
               <a href="{{ route('topics.edit', $topic->id) }}" class="btn btn-outline-secondary btn-sm" role="button"><i class="fa fa-edit mr-2"></i>编辑</a>
-              <a href="#" class="btn btn-outline-secondary btn-sm" role="button"><i class="fa fa-trash mr-2"></i>删除</a>
-            @endif
+              <form action="{{ route('topics.destroy', $topic->id) }}" method="POST" class="d-inline-block" onsubmit="return confirm('您确定要删除吗？')">
+                @csrf
+                @method('DELETE')
+                <button type="submit" class="btn btn-sm btn-outline-secondary">
+                  <i class="far fa-trash-alt mr-2"></i>删除
+                </button>
+              </form>
+            @endcan
           </div>
         </div>
       </div>
