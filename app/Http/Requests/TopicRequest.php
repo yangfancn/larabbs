@@ -10,17 +10,14 @@ class TopicRequest extends Request
         {
             // CREATE
             case 'POST':
-            {
-                return [
-                    // CREATE ROLES
-                ];
-            }
             // UPDATE
             case 'PUT':
             case 'PATCH':
             {
                 return [
-                    // UPDATE ROLES
+                    'title' => 'required|min:2|max:80',
+                    'body' => 'required|min:3',
+                    'category_id' => 'required|numeric'
                 ];
             }
             case 'GET':
@@ -35,7 +32,9 @@ class TopicRequest extends Request
     public function messages()
     {
         return [
-            // Validation messages
+            'title.min' => '标题至少2个字符',
+            'title.max' => '标题最多80个字符',
+            'body.min' => '话题内容至少三个字符',
         ];
     }
 }
