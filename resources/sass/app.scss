@@ -85,35 +85,35 @@ html {
 .topics_index-page,
 .categories_show-page {
   .topic-list {
-    .nav>li>a {
-      position: relative;
-      display: block;
-      padding: 5px 14px;
-      font-size: 0.9em;
-    }
+  }
 
-    .media-object {
-      width: 52px;
-      height: 52px;
-    }
+  .nav>li>a {
+    position: relative;
+    display: block;
+    padding: 5px 14px;
+    font-size: 0.9em;
+  }
+
+  .media-object {
+    width: 52px;
+    height: 52px;
+  }
+
+  a {
+    color: #444444;
+  }
+
+  .meta {
+    font-size: 0.9em;
+    color: #b3b3b3;
 
     a {
-      color: #444444;
+      color: #bb33bb;
     }
+  }
 
-    .meta {
-      font-size: 0.9em;
-      color: #b3b3b3;
-
-      a {
-        color: #bb33bb;
-      }
-    }
-
-    .badge {
-      background-color: #d8d8d8;
-    }
-
+  .badge {
+    background-color: #d8d8d8;
   }
 }
 
@@ -154,6 +154,22 @@ html {
       margin: 0.4em auto 0.6em;
       font-size: 28px;
       line-height: 38px;
+    }
+  }
+
+  .topic-reply {
+    a {
+      color: inherit;
+    }
+
+    .meta {
+      font-size: .9em;
+      color: #b3b3b3;
+    }
+
+    .media-object {
+      width: 52px;
+      height: 52px;
     }
   }
 }

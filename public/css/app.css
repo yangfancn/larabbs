@@ -17116,38 +17116,38 @@ html {
   padding: 3px;
 }
 
-.topics_index-page .topic-list .nav > li > a,
-.categories_show-page .topic-list .nav > li > a {
+.topics_index-page .nav > li > a,
+.categories_show-page .nav > li > a {
   position: relative;
   display: block;
   padding: 5px 14px;
   font-size: 0.9em;
 }
 
-.topics_index-page .topic-list .media-object,
-.categories_show-page .topic-list .media-object {
+.topics_index-page .media-object,
+.categories_show-page .media-object {
   width: 52px;
   height: 52px;
 }
 
-.topics_index-page .topic-list a,
-.categories_show-page .topic-list a {
+.topics_index-page a,
+.categories_show-page a {
   color: #444444;
 }
 
-.topics_index-page .topic-list .meta,
-.categories_show-page .topic-list .meta {
+.topics_index-page .meta,
+.categories_show-page .meta {
   font-size: 0.9em;
   color: #b3b3b3;
 }
 
-.topics_index-page .topic-list .meta a,
-.categories_show-page .topic-list .meta a {
+.topics_index-page .meta a,
+.categories_show-page .meta a {
   color: #bb33bb;
 }
 
-.topics_index-page .topic-list .badge,
-.categories_show-page .topic-list .badge {
+.topics_index-page .badge,
+.categories_show-page .badge {
   background-color: #d8d8d8;
 }
 
@@ -17633,5 +17633,19 @@ html {
   margin: 0.4em auto 0.6em;
   font-size: 28px;
   line-height: 38px;
+}
+
+.topics_show-page .topic-reply a {
+  color: inherit;
+}
+
+.topics_show-page .topic-reply .meta {
+  font-size: 0.9em;
+  color: #b3b3b3;
+}
+
+.topics_show-page .topic-reply .media-object {
+  width: 52px;
+  height: 52px;
 }
 

@@ -33,7 +33,8 @@ function if_route_param($param, $value)
 
 function if_query($query, $value)
 {
-    return request()->$query && request()->$query == $value;
+    $value = $value == null ? '' : $value;
+    return request()->$query == $value;
 }
 
 
