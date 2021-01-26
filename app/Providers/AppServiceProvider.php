@@ -4,6 +4,7 @@ namespace App\Providers;
 
 use App\Http\Controllers\TopicsController;
 use App\Models\Topic;
+use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\ServiceProvider;
 use App\Observers\TopicObserver;
 
@@ -31,5 +32,6 @@ class AppServiceProvider extends ServiceProvider
 
         \Illuminate\Pagination\Paginator::useBootstrap();
         Topic::observe(TopicObserver::class);
+        Schema::defaultStringLength(191);
     }
 }
