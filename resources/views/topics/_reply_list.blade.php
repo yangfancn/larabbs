@@ -14,8 +14,14 @@
           <span class="text-secondary mx-2">•</span>
           <span class="meta text-secondary" title="{{ $reply->created_at }}">{{$reply->created_at->diffForHumans()}}</span>
           {{--     删除回复     --}}
-          <span class="meta float-right">
-            <a href="javascript:;" title="删除回复"><i class="far fa-trash-alt"></i></a>
+          @can('destroy', $reply)
+            <span class="meta float-right">
+            <form action="{{ route('replies.destroy', $reply->id) }}" onsubmit="return confirm('确定删除此回复吗？')" method="POST">
+              @csrf
+              @method('DELETE')
+              <button class="btn btn-default btn-xs pull-left text-secondary"><i class="fa fa-trash-alt"></i></button>
+            </form>
+          @endcan
           </span>
         </div>
         <div class="reply-content text-secondary">
